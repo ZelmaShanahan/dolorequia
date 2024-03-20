@@ -1,0 +1,52 @@
+{
+  "name": "@kintone/profile-loader",
+  "version": "2.0.5",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Cybozu, Inc.",
+    "url": "https://cybozu.co.jp"
+  },
+  "description": "A loader for Kintone setting",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kintone/js-sdk.git",
+    "directory": "packages/profile-loader"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kintone/js-sdk/issues"
+  },
+  "homepage": "https://github.com/kintone/js-sdk/tree/master/packages/profile-loader#readme",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "tsc --build --force",
+    "lint": "run-p -l lint:*",
+    "test": "jest",
+    "test:ci": "jest --runInBand",
+    "clean": "rimraf lib esm umd",
+    "fix:lint": "yarn lint:eslint --fix",
+    "fix:md": "prettier --write README.md",
+    "fix": "run-p fix:*",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:md": "prettier --check README.md",
+    "start": "yarn build --watch"
+  },
+  "dependencies": {
+    "toml": "^3.0.0"
+  }
+}

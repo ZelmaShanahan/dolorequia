@@ -1,0 +1,16 @@
+{
+    "extends": "../tsconfig-base.json",
+    "files": [
+        "./kintone.d.ts"
+    ],
+    "include" : [
+        "src/**/*.ts"
+    ],
+    "compilerOptions": {
+        "lib": ["es2015", "dom"],
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": false // TODO enable strict mode
+    },
+    "references": []
+}

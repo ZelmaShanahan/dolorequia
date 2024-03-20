@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig-base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "typeRoots": [
+      "node_modules/@types",
+      "../../node_modules/@types",
+      "types"
+    ]
+  },
+  "references": [
+    { "path": "../plugin-packer" }
+  ]
+}
